@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Scanner;
 
@@ -25,7 +26,7 @@ import java.util.Scanner;
 public class App extends Application {
     public static final String PS1 = "$ ";
     public static final String PS2 = "> ";
-    public static final String BUNDLE = "C:\\Users\\andre\\IdeaProjects\\Lab8_1\\src\\client\\resources\\bundles\\gui.properties";
+    public static final String BUNDLE = "client.resources.bundles.gui";
 
     private static final String APP_TITLE = "Collection Keeper";
 
@@ -78,7 +79,7 @@ public class App extends Application {
             this.primaryStage = stage;
 
             FXMLLoader loginWindowLoader = new FXMLLoader();
-            loginWindowLoader.setLocation(getClass().getResource("/view/LoginWindow.fxml"));
+            loginWindowLoader.setLocation(getClass().getResource("resources/view/LoginWindow.fxml"));
             Parent loginWindowRootNode = loginWindowLoader.load();
             Scene loginWindowScene = new Scene(loginWindowRootNode);
             LoginWindowController loginWindowController = loginWindowLoader.getController();
@@ -114,14 +115,14 @@ public class App extends Application {
     public void setMainWindow() {
         try {
             FXMLLoader mainWindowLoader = new FXMLLoader();
-            mainWindowLoader.setLocation(getClass().getResource("/view/MainWindow.fxml"));
+            mainWindowLoader.setLocation(getClass().getResource("resources/view/MainWindow.fxml"));
             Parent mainWindowRootNode = mainWindowLoader.load();
             Scene mainWindowScene = new Scene(mainWindowRootNode);
             MainWindowController mainWindowController = mainWindowLoader.getController();
             mainWindowController.initLangs(resourceFactory);
 
             FXMLLoader askWindowLoader = new FXMLLoader();
-            askWindowLoader.setLocation(getClass().getResource("/view/AskWindow.fxml"));
+            askWindowLoader.setLocation(getClass().getResource("resources/view/AskWindow.fxml"));
             Parent askWindowRootNode = askWindowLoader.load();
             Scene askWindowScene = new Scene(askWindowRootNode);
             Stage askStage = new Stage();
