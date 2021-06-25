@@ -6,7 +6,6 @@ import common.utility.Outputer;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import server.server.commands.*;
 import server.server.utility.*;
 
