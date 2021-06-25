@@ -2,7 +2,7 @@ package server.server.utility;
 
 import common.exceptions.HistoryIsEmptyException;
 import common.interaction.User;
-import server.server.commands.*;
+import server.server.commands.Command;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +35,7 @@ public class CommandManager {
     private ReadWriteLock historyLocker = new ReentrantReadWriteLock();
     private ReadWriteLock collectionLocker = new ReentrantReadWriteLock();
 
-    public CommandManager(HelpCommand helpCommand, InfoCommand addCommand1, ShowCommand command, AddCommand byIdCommand, Command infoCommand, Command addCommand, Command updateCommand, Command removeByIdCommand,
+    public CommandManager(Command infoCommand, Command addCommand, Command updateCommand, Command removeByIdCommand,
                           Command clearCommand, Command exitCommand, Command executeScriptCommand, Command addIfMinCommand,
                           Command removeGreaterCommand, Command historyCommand, Command sumOfHealthCommand,
                           Command loginCommand, Command registerCommand, Command refreshCommand) {

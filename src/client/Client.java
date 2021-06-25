@@ -139,7 +139,6 @@ public class Client implements Runnable {
      * @return Is everything OK.
      */
     public boolean processAuthentication(String username, String password, boolean register) {
-        // TODO: Переместить все в один метод (?)
         Request requestToServer = null;
         Response serverResponse = null;
         String command;
