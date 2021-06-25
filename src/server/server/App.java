@@ -3,8 +3,10 @@ package server.server;
 import common.exceptions.NotInDeclaredLimitsException;
 import common.exceptions.WrongAmountOfElementsException;
 import common.utility.Outputer;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import server.server.commands.*;
 import server.server.utility.*;
 
@@ -21,6 +23,7 @@ public class App {
     private static String databaseAddress;
 
     public static void main(String[] args) {
+        BasicConfigurator.configure();
         if (!initialize(/*args*/)) return;
         DatabaseHandler databaseHandler = new DatabaseHandler(databaseAddress, databaseUsername, databasePassword);
         DatabaseUserManager databaseUserManager = new DatabaseUserManager(databaseHandler);
