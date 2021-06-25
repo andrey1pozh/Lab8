@@ -25,7 +25,7 @@ import java.util.Scanner;
 public class App extends Application {
     public static final String PS1 = "$ ";
     public static final String PS2 = "> ";
-    public static final String BUNDLE = "resources.bundles.gui";
+    public static final String BUNDLE = "C:\\Users\\andre\\IdeaProjects\\Lab8_1\\src\\client\\resources\\bundles\\gui.properties";
 
     private static final String APP_TITLE = "Collection Keeper";
 
@@ -92,7 +92,6 @@ public class App extends Application {
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (Exception exception) {
-            // TODO: Обработать ошибки
             System.out.println(exception);
             exception.printStackTrace();
         }
@@ -147,7 +146,6 @@ public class App extends Application {
             primaryStage.setMinHeight(mainWindowScene.getHeight());
             primaryStage.setResizable(true);
         } catch (Exception exception) {
-            // TODO: Обработать ошибки
             System.out.println(exception);
             exception.printStackTrace();
         }

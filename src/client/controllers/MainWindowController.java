@@ -203,8 +203,7 @@ public class MainWindowController {
      * Bind gui language.
      */
     private void bindGuiLanguage() {
-        resourceFactory.setResources(ResourceBundle.getBundle
-                (App.BUNDLE, localeMap.get(languageComboBox.getSelectionModel().getSelectedItem())));
+        resourceFactory.setResources(ResourceBundle.getBundle(App.BUNDLE, localeMap.get(languageComboBox.getSelectionModel().getSelectedItem())));
 
         idColumn.textProperty().bind(resourceFactory.getStringBinding("IdColumn"));
         ownerColumn.textProperty().bind(resourceFactory.getStringBinding("OwnerColumn"));

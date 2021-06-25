@@ -1,5 +1,6 @@
 package client.controllers.tools;
 
+import common.utility.Outputer;
 import javafx.beans.binding.StringBinding;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
