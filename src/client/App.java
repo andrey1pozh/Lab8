@@ -25,7 +25,7 @@ import java.util.Scanner;
 public class App extends Application {
     public static final String PS1 = "$ ";
     public static final String PS2 = "> ";
-    public static final String BUNDLE = "bundles.gui";
+    public static final String BUNDLE = "resources.bundles.gui";
 
     private static final String APP_TITLE = "Collection Keeper";
 
